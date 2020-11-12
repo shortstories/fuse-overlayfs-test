@@ -9,5 +9,5 @@ RUN --mount=from=fuse-overlayfs-test-src,src=/usr/src/fuse-overlayfs-test,target
     cp fuse-overlayfs-test /usr/local/bin/fuse-overlayfs-test && \
     chmod +x /usr/local/bin/fuse-overlayfs-test && \
     fuse-overlayfs-test && \
-    ls -al /build
-RUN ls -al /build
+    ls -al /usr/local/bin
+RUN ls -al /usr/local/bin
