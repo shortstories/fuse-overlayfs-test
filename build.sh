@@ -1,5 +1,5 @@
 #!/bin/bash
-# moby/buildkit:master-rootless \
+
 docker run \
     -it \
     --rm \
@@ -7,7 +7,7 @@ docker run \
     -e BUILDKITD_FLAGS='--root=/tmp/.local/share/buildkit --oci-worker-no-process-sandbox --oci-worker-snapshotter=fuse-overlayfs' \
     -v $(pwd):/tmp/work \
     --entrypoint buildctl-daemonless.sh \
-    reg.navercorp.com/ncc-bd/buildkit:master-20201112-1 \
+    moby/buildkit:master-rootless \
         build \
         --frontend \
         dockerfile.v0 \
