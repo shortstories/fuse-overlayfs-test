@@ -6,8 +6,7 @@ FROM golang:1.14-buster
 WORKDIR /build
 
 RUN --mount=from=fuse-overlayfs-test-src,src=/usr/src/fuse-overlayfs-test,target=.,readwrite \
-
-RUN go build -o fuse-overlayfs-test . && \
+    go build -o fuse-overlayfs-test . && \
     ./fuse-overlayfs-test && \
     ls -al
 
